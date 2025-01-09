@@ -53,8 +53,9 @@ def main():
     print("'143' append to start:", singly_linked_list)
     singly_linked_list.insert(2, 2232134234)
     print("'2232134234' append to index '2':", singly_linked_list)
-    singly_linked_list.delete_end()
+    singly_linked_list.replace_index(2, 347812)
     print("'2' index element replaced to '347812':", singly_linked_list)
+    singly_linked_list.delete_end()
     print('deleted end:', singly_linked_list)
     singly_linked_list.replace_index(2, 347812)
     
