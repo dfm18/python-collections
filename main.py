@@ -1,4 +1,4 @@
-from dfm18.collections import Array
+from dfm18.collections import Array, Grid
 
 
 def print_separator():
@@ -16,6 +16,14 @@ def main():
     print("Length:", len(array))
     print("Item at index 4:", array[4])
     print("Iterator:", iter(array))
+    
+    print_separator()
+    # Grid
+    grid = Grid(4, 5)
+    grid.random_fill(10, 200)
+    
+    print("Grid dimensions:", grid.get_dimensions())
+    print(grid)
     
     print_separator()
 

@@ -1,4 +1,5 @@
-__all__ = ["Array"]
+__all__ = ["Array", "Grid"]
 
 
 from ._array import Array
+from ._grid import Grid
