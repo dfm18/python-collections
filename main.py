@@ -1,4 +1,5 @@
 from dfm18.collections import Array, Grid, Node
+from dfm18.collections.lists import SinglyLinkedList
 
 
 def print_separator():
@@ -34,6 +35,20 @@ def main():
     while head != None:
         print(head.data)
         head = head.next
+    
+    print_separator()
+    # Singly Linked List
+    singly_linked_list = SinglyLinkedList()
+    
+    for i in range(10):
+        singly_linked_list.append(i)
+    
+    print(singly_linked_list)
+    singly_linked_list.search(2)
+    singly_linked_list.search(5)
+    singly_linked_list.delete(5)
+    singly_linked_list.search(5)
+    print(singly_linked_list)
     
     print_separator()
 
