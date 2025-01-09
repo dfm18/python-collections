@@ -1,4 +1,4 @@
-from dfm18.collections import Array, Grid
+from dfm18.collections import Array, Grid, Node
 
 
 def print_separator():
@@ -24,6 +24,16 @@ def main():
     
     print("Grid dimensions:", grid.get_dimensions())
     print(grid)
+    
+    print_separator()
+    # Node
+    head: Node[int] = None
+    for count in range(5):
+        head = Node(count, head)
+    
+    while head != None:
+        print(head.data)
+        head = head.next
     
     print_separator()
 
