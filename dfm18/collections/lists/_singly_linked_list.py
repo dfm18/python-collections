@@ -85,6 +85,7 @@ class SinglyLinkedList[T]:
             while probe.next.next != None:
                 probe = probe.next
             probe.next = None
+            self.size -= 1
     
     def search(self, data: T) -> bool:
         for node_data in self.iter():
