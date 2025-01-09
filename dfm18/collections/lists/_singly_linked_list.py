@@ -5,34 +5,34 @@ from .._node import Node
 
 class SinglyLinkedList[T]:
     def __init__(self):
-        self.tail: Optional[None[T]] = None
+        self.head: Optional[None[T]] = None
         self.size = 0
     
     def append(self, data: T):
         node = Node(data)
-        if self.tail is None:
-            self.tail = node
+        if self.head is None:
+            self.head = node
         else:
-            current = self.tail
+            current = self.head
             while current.next:
                 current = current.next
             current.next = node
         self.size += 1
     
     def iter(self):
-        current = self.tail
+        current = self.head
         while current:
             yield current.data
             current = current.next
     
     def delete(self, data: T) -> bool:
-        current = self.tail
+        current = self.head
         previous = None
         
         while current:
             if current.data == data:
-                if current == self.tail:
-                    self.tail = current.next
+                if current == self.head:
+                    self.head = current.next
                 else:
                     previous.next = current.next
                 self.size -= 1
@@ -50,7 +50,7 @@ class SinglyLinkedList[T]:
         return False
     
     def clear(self):
-        self.tail = None
+        self.head = None
         self.head = None
         self.size = 0
     
