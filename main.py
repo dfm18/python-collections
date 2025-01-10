@@ -1,4 +1,4 @@
-from dfm18.collections import Array, Grid, Node
+from dfm18.collections import Array, Grid, Node, Stack
 from dfm18.collections.lists import SinglyLinkedList, DoublyLinkedList
 
 import random
@@ -78,6 +78,19 @@ def main():
     print("'222' append to start:", doubly_linked_list)
     doubly_linked_list.delete_end()
     print('deleted end:', doubly_linked_list)
+    
+    print_separator()
+    # Stack
+    stack = Stack[str]()
+    
+    stack.push("asedad")
+    stack.push("dadd")
+    stack.search("dadd")
+    stack.search("c")
+    print("Last in, first out: ", stack.pop())
+    print("Top data: ", stack.peek())
+    stack.clear()
+    print("Stack cleared")
     
     print_separator()
 
