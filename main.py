@@ -1,5 +1,6 @@
 from dfm18.collections import Array, Grid, Node, Stack
 from dfm18.collections.lists import SinglyLinkedList, DoublyLinkedList
+from dfm18.collections.queues import ListBasedQueue
 
 import random
 
@@ -91,6 +92,19 @@ def main():
     print("Top data: ", stack.peek())
     stack.clear()
     print("Stack cleared")
+    
+    print_separator()
+    # List Based Queue
+    lb_queue = ListBasedQueue[str]()
+    
+    for c in ['a', 'b', 'c']:
+        lb_queue.enqueue(c)
+    
+    lb_queue.traverse()
+    
+    print("First letter in the queue: ", lb_queue.unqueue())
+    
+    lb_queue.traverse()
     
     print_separator()
 
