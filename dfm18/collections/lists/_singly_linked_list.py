@@ -30,6 +30,9 @@ class SinglyLinkedList[T]:
         if index == 0:
             self.append_to_start(data)
             return
+        if index == self.size:
+            self.append(data)
+            return
         
         count = 0
         current = self.head
