@@ -1,5 +1,7 @@
 from dfm18.collections import Array, Grid, Node
-from dfm18.collections.lists import SinglyLinkedList
+from dfm18.collections.lists import SinglyLinkedList, DoublyLinkedList
+
+import random
 
 
 def print_separator():
@@ -57,7 +59,25 @@ def main():
     print("'2' index element replaced to '347812':", singly_linked_list)
     singly_linked_list.delete_end()
     print('deleted end:', singly_linked_list)
-    singly_linked_list.replace_index(2, 347812)
+    
+    print_separator()
+    # Doubly Linked Lists
+    doubly_linked_list = DoublyLinkedList()
+    
+    for _ in range(20):
+        doubly_linked_list.append(random.randint(0, 100))
+    
+    print(doubly_linked_list)
+    doubly_linked_list.search(20)
+    doubly_linked_list.search(11)
+    doubly_linked_list.delete(5)
+    doubly_linked_list.delete(20)
+    doubly_linked_list.search(20)
+    print(doubly_linked_list)
+    doubly_linked_list.append_to_start(222)
+    print("'222' append to start:", doubly_linked_list)
+    doubly_linked_list.delete_end()
+    print('deleted end:', doubly_linked_list)
     
     print_separator()
 
