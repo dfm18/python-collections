@@ -1,4 +1,4 @@
-__all__ = ["ListBasedQueue"]
+__all__ = ["ListBasedQueue", "EmptyQueueException"]
 
 
 from ._list_based_queue import ListBasedQueue
