@@ -1,6 +1,6 @@
 import unittest
 
-from dfm18.collections import Stack, EmptyStackException
+from dfm18.structures import Stack, EmptyStackException
 
 
 class TestStack(unittest.TestCase):

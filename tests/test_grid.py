@@ -1,6 +1,6 @@
 import unittest
 
-from dfm18.collections._grid import Grid
+from dfm18.structures._grid import Grid
 
 
 class TestGrid(unittest.TestCase):

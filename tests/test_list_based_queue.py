@@ -1,7 +1,7 @@
 import unittest
 
-from dfm18.collections.queues._list_based_queue import ListBasedQueue
-from dfm18.collections.queues._errors import EmptyQueueException
+from dfm18.structures.queues._list_based_queue import ListBasedQueue
+from dfm18.structures.queues._errors import EmptyQueueException
 
 
 class TestListBasedQueue(unittest.TestCase):

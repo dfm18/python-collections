@@ -1,6 +1,6 @@
 import unittest
 
-from dfm18.collections._array import Array
+from dfm18.structures._array import Array
 
 
 class TestArray(unittest.TestCase):

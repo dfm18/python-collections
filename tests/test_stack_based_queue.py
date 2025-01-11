@@ -1,7 +1,7 @@
 import unittest
 
-from dfm18.collections.queues._stack_based_queue import StackBasedQueue
-from dfm18.collections.queues._errors import EmptyQueueException
+from dfm18.structures.queues._stack_based_queue import StackBasedQueue
+from dfm18.structures.queues._errors import EmptyQueueException
 
 
 class TestStackBasedQueue(unittest.TestCase):

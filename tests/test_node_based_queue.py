@@ -1,7 +1,7 @@
 import unittest
 
-from dfm18.collections.queues._node_based_queue import NodeBasedQueue
-from dfm18.collections.queues._errors import EmptyQueueException
+from dfm18.structures.queues._node_based_queue import NodeBasedQueue
+from dfm18.structures.queues._errors import EmptyQueueException
 
 
 class TestNodeBasedQueue(unittest.TestCase):
