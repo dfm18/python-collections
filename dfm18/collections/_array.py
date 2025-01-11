@@ -8,6 +8,9 @@ class Array[T]:
         self._items = list()
         for _ in range(capacity):
             self._items.append(fill_value)
+    
+    def contains(self, target: T) -> bool:
+        return target in self._items
 
     def __len__(self) -> int:
         return len(self._items)
@@ -23,6 +26,9 @@ class Array[T]:
 
     def __setitem__(self, index: int, new_item: T):
         self._items[index] = new_item
+    
+    def __contains__(self, target: T) -> bool:
+        return self.contains(target)
 
     @property
     def capacity(self) -> int:

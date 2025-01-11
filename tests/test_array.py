@@ -60,6 +60,20 @@ class TestArray(unittest.TestCase):
 
         self.assertEqual(arr.capacity, 3)
 
+    def test_contains(self):
+        arr = Array(3, fill_value=0)
+
+        arr[1] = 3
+        self.assertTrue(arr.contains(3))
+        self.assertFalse(arr.contains(5))
+
+    def test_contains_dunder_method(self):
+        arr = Array(3, fill_value=0)
+
+        arr[1] = 3
+        self.assertTrue(3 in arr)
+        self.assertFalse(5 in arr)
+
 
 if __name__ == "__main__":
     unittest.main()
