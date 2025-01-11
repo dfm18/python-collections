@@ -40,11 +40,15 @@ class TestStack(unittest.TestCase):
     def test_contains(self):
         self.stack.push(10)
         self.assertTrue(self.stack.contains(10))
-        self.assertTrue(10 in self.stack)
         self.assertFalse(self.stack.contains(20))
-        self.assertFalse(20 in self.stack)
         self.stack.pop()
         self.assertFalse(self.stack.contains(10))
+
+    def test_contains_dunder_method(self):
+        self.stack.push(10)
+        self.assertTrue(10 in self.stack)
+        self.assertFalse(20 in self.stack)
+        self.stack.pop()
         self.assertFalse(10 in self.stack)
 
     def test_clear(self):
