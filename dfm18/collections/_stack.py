@@ -41,17 +41,17 @@ class Stack[T]:
         else:
             raise EmptyStackException("Stack is empty")
     
-    def contains(self, data: T) -> bool:
+    def contains(self, target: T) -> bool:
         current = self.top
         
         while current:
-            if current.data == data:
+            if current.data == target:
                 return True
             current = current.next
         return False
     
-    def __contains__(self, data: T) -> bool:
-        return self.contains(data)
+    def __contains__(self, target: T) -> bool:
+        return self.contains(target)
     
     def clear(self):
         while self.top:
