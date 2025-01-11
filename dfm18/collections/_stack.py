@@ -50,6 +50,9 @@ class Stack[T]:
             current = current.next
         return False
 
+    def __len__(self) -> int:
+        return self.size
+
     def __contains__(self, target: T) -> bool:
         return self.contains(target)
 

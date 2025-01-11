@@ -51,6 +51,17 @@ class TestStack(unittest.TestCase):
         self.stack.pop()
         self.assertFalse(10 in self.stack)
 
+    def test_len_dunder_method(self):
+        self.assertEqual(len(self.stack), 0)
+        self.stack.push(10)
+        self.assertEqual(len(self.stack), 1)
+        self.stack.push(20)
+        self.assertEqual(len(self.stack), 2)
+        self.stack.pop()
+        self.assertEqual(len(self.stack), 1)
+        self.stack.pop()
+        self.assertEqual(len(self.stack), 0)
+
     def test_clear(self):
         self.stack.push(10)
         self.stack.push(20)
