@@ -1,7 +1,9 @@
+from ._queue import Queue
+
 from ._errors import EmptyQueueException
 
 
-class ListBasedQueue[T]:
+class ListBasedQueue[T](Queue[T]):
     def __init__(self):
         self.items = list[T]()
 
@@ -14,15 +16,6 @@ class ListBasedQueue[T]:
         data = self.items.pop()
         return data
 
-    def traverse(self):
-        total_items = self.size
-
-        for i in range(total_items):
-            print(self.items[i])
-
     @property
-    def size(self):
-        return len(self.items)
-
-    def __len__(self):
+    def size(self) -> int:
         return len(self.items)
