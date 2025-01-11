@@ -10,9 +10,9 @@ class ListBasedQueue[T](Queue[T]):
     def enqueue(self, data: T):
         self.items.insert(0, data)
 
-    def unqueue(self) -> T:
+    def dequeue(self) -> T:
         if not self.items:
-            raise EmptyQueueException("Unqueue from empty queue")
+            raise EmptyQueueException("dequeue from empty queue")
         data = self.items.pop()
         return data
 

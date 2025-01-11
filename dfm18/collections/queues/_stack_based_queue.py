@@ -13,7 +13,7 @@ class StackBasedQueue[T](Queue[T]):
     def enqueue(self, data: T):
         self._inbound_stack.push(data)
 
-    def unqueue(self) -> T:
+    def dequeue(self) -> T:
         self._transfer_inbound_to_outbound()
 
         if len(self._outbound_stack) == 0:

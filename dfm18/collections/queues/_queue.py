@@ -7,7 +7,7 @@ class Queue[T](ABC):
         pass
 
     @abstractmethod
-    def unqueue(self) -> T:
+    def dequeue(self) -> T:
         pass
 
     @property

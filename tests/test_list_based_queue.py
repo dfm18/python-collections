@@ -15,18 +15,18 @@ class TestListBasedQueue(unittest.TestCase):
         self.queue.enqueue(20)
         self.assertEqual(self.queue.size, 2)
 
-    def test_unqueue_decreases_size(self):
+    def test_dequeue_decreases_size(self):
         self.queue.enqueue(10)
         self.queue.enqueue(20)
         self.assertEqual(self.queue.size, 2)
-        self.assertEqual(self.queue.unqueue(), 10)
+        self.assertEqual(self.queue.dequeue(), 10)
         self.assertEqual(self.queue.size, 1)
-        self.assertEqual(self.queue.unqueue(), 20)
+        self.assertEqual(self.queue.dequeue(), 20)
         self.assertEqual(self.queue.size, 0)
 
-    def test_unqueue_on_empty_queue_raises_exception(self):
+    def test_dequeue_on_empty_queue_raises_exception(self):
         with self.assertRaises(EmptyQueueException):
-            self.queue.unqueue()
+            self.queue.dequeue()
 
     def test_size_property(self):
         self.assertEqual(self.queue.size, 0)
@@ -34,7 +34,7 @@ class TestListBasedQueue(unittest.TestCase):
         self.assertEqual(self.queue.size, 1)
         self.queue.enqueue(20)
         self.assertEqual(self.queue.size, 2)
-        self.queue.unqueue()
+        self.queue.dequeue()
         self.assertEqual(self.queue.size, 1)
 
     def test_len_dunder_method(self):
@@ -42,13 +42,13 @@ class TestListBasedQueue(unittest.TestCase):
         self.queue.enqueue(10)
         self.queue.enqueue(20)
         self.assertEqual(len(self.queue), 2)
-        self.queue.unqueue()
+        self.queue.dequeue()
         self.assertEqual(len(self.queue), 1)
 
-    def test_enqueue_and_unqueue_with_multiple_types(self):
+    def test_enqueue_and_dequeue_with_multiple_types(self):
         queue = ListBasedQueue[str]()
         queue.enqueue("first")
         queue.enqueue("second")
-        self.assertEqual(queue.unqueue(), "first")
-        self.assertEqual(queue.unqueue(), "second")
+        self.assertEqual(queue.dequeue(), "first")
+        self.assertEqual(queue.dequeue(), "second")
         self.assertEqual(queue.size, 0)
